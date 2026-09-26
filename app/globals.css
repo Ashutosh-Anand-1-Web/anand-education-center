@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary-navy: #0B1F3A;
+  --color-primary-navy-dark: #071527;
+  --color-primary-navy-light: #163259;
+  --color-accent-gold: #C9A227;
+  --color-accent-gold-dark: #A6841C;
+  --color-accent-gold-wash: #FBF8EE;
+  --color-bg-canvas: #FAFAF7;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-subtle: #F3F4F1;
+  --color-bg-navy-wash: #F0F4F8;
+  --color-text-primary: #172033;
+  --color-text-secondary: #475467;
+  --color-text-muted: #667085;
+  --color-border-subtle: #EBECE9;
+  --color-border-default: #D0D5DD;
+}
+
+@theme inline {
+  --color-primary-navy: var(--color-primary-navy);
+  --color-primary-navy-dark: var(--color-primary-navy-dark);
+  --color-primary-navy-light: var(--color-primary-navy-light);
+  --color-accent-gold: var(--color-accent-gold);
+  --color-accent-gold-dark: var(--color-accent-gold-dark);
+  --color-accent-gold-wash: var(--color-accent-gold-wash);
+  --color-bg-canvas: var(--color-bg-canvas);
+  --color-bg-surface: var(--color-bg-surface);
+  --color-bg-subtle: var(--color-bg-subtle);
+  --color-bg-navy-wash: var(--color-bg-navy-wash);
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-border-subtle: var(--color-border-subtle);
+  --color-border-default: var(--color-border-default);
+
+  --font-serif: var(--font-source-serif), "Source Serif 4", Merriweather, Georgia, serif;
+  --font-sans: var(--font-inter), Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: var(--color-bg-canvas);
+  color: var(--color-text-primary);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-canvas);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary-navy);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

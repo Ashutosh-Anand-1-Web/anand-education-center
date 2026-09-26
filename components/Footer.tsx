@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Phone, MapPin, ArrowRight } from "lucide-react";
 
 export default function Footer() {
@@ -10,15 +11,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-white/10">
           {/* Col 1: Brand & Institutional Identity (5 of 12 cols) */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="relative h-10 w-36">
-              <Image
-                src="/assets/logo/anand-education-center-logo.png"
-                alt="Anand Education Center Logo"
-                fill
-                sizes="144px"
-                className="object-contain object-left brightness-105"
-              />
-            </div>
+            <Link href="/" className="inline-block focus-visible:outline-white">
+              <div className="relative h-10 w-36">
+                <Image
+                  src="/assets/logo/anand-education-center-logo.png"
+                  alt="Anand Education Center Logo"
+                  fill
+                  sizes="144px"
+                  className="object-contain object-left brightness-105"
+                />
+              </div>
+            </Link>
             <p className="text-[14px] text-[#CBD5E1] font-sans leading-relaxed max-w-[380px]">
               An authentic competitive-examination preparation institute in Bidupur, Vaishali,
               Bihar. Mentoring aspirants for UPSC, BPSC, SSC, Railway, and Banking recruitment.
@@ -36,39 +39,39 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-[13px] text-[#CBD5E1] font-sans">
               <li>
-                <a href="#hero" className="hover:text-white transition-colors">
+                <Link href="/" className="hover:text-white transition-colors">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="hover:text-white transition-colors">
+                <Link href="/about" className="hover:text-white transition-colors">
                   About Institute
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#courses" className="hover:text-white transition-colors">
+                <Link href="/courses" className="hover:text-white transition-colors">
                   Courses
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#founders" className="hover:text-white transition-colors">
+                <Link href="/#founders" className="hover:text-white transition-colors">
                   Founders & Mentors
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#results" className="hover:text-white transition-colors">
+                <Link href="/#results" className="hover:text-white transition-colors">
                   Results Registry
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#admissions" className="hover:text-white transition-colors">
+                <Link href="/#admissions" className="hover:text-white transition-colors">
                   Admissions
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="hover:text-white transition-colors">
+                <Link href="/#contact" className="hover:text-white transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -80,29 +83,29 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-[13px] text-[#CBD5E1] font-sans">
               <li>
-                <a href="#courses" className="hover:text-white transition-colors">
+                <Link href="/courses/upsc" className="hover:text-white transition-colors">
                   UPSC Civil Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#courses" className="hover:text-white transition-colors">
+                <Link href="/courses/bpsc" className="hover:text-white transition-colors">
                   BPSC State Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#courses" className="hover:text-white transition-colors">
+                <Link href="/courses/ssc" className="hover:text-white transition-colors">
                   SSC CGL / CHSL
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#courses" className="hover:text-white transition-colors">
+                <Link href="/courses/railway" className="hover:text-white transition-colors">
                   Railway Recruitment
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#courses" className="hover:text-white transition-colors">
+                <Link href="/courses/banking" className="hover:text-white transition-colors">
                   Banking Examinations
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -132,13 +135,13 @@ export default function Footer() {
             </div>
 
             <div className="pt-2">
-              <a
-                href="#admissions"
+              <Link
+                href="/#admissions"
                 className="min-h-[44px] inline-flex items-center gap-2 px-3.5 py-2 bg-[#163259] hover:bg-[#0B1F3A] border border-white/10 rounded-[4px] text-[12px] font-semibold text-white transition-colors"
               >
                 <span>Student Login Portal</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#C9A227]" aria-hidden="true" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

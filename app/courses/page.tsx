@@ -186,13 +186,13 @@ export default function CoursesPage() {
                     </div>
                   </div>
 
-                  {/* Right Column: Direct Inquire Action (3 of 12 cols) */}
+                  {/* Right Column: Direct Course Page Link (3 of 12 cols) */}
                   <div className="lg:col-span-3 lg:text-right pt-2 lg:pt-0">
                     <Link
-                      href="/#admissions"
+                      href={`/courses/${course.id}`}
                       className="min-h-[44px] inline-flex items-center gap-2 text-[13px] font-semibold text-[#0B1F3A] hover:text-[#163259] bg-white border border-[#D0D5DD] hover:border-[#0B1F3A] px-4 py-2.5 rounded-[4px] transition-colors focus-visible:outline-[#0B1F3A]"
                     >
-                      <span>Enquire for Program</span>
+                      <span>View Course Details</span>
                       <ArrowRight className="w-3.5 h-3.5 text-[#C9A227]" aria-hidden="true" />
                     </Link>
                   </div>

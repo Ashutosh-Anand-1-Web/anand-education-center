@@ -2,16 +2,17 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Phone, MapPin, Menu, X, ArrowRight } from "lucide-react";
 
 const NAV_LINKS = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Courses", href: "#courses" },
-  { name: "Faculty", href: "#founders" },
-  { name: "Results", href: "#results" },
-  { name: "Admissions", href: "#admissions" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Courses", href: "/courses" },
+  { name: "Faculty", href: "/#founders" },
+  { name: "Results", href: "/#results" },
+  { name: "Admissions", href: "/#admissions" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Header() {
@@ -81,8 +82,8 @@ export default function Header() {
       >
         <div className="max-w-[1200px] mx-auto px-5 sm:px-6 lg:px-12 flex items-center justify-between">
           {/* Institute Master Logo Lockup */}
-          <a
-            href="#hero"
+          <Link
+            href="/"
             className="flex items-center gap-3 group focus-visible:outline-[#0B1F3A]"
             aria-label="Anand Education Center — Home"
           >
@@ -96,7 +97,7 @@ export default function Header() {
                 className="object-contain object-left"
               />
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Nav Links */}
           <nav
@@ -104,30 +105,30 @@ export default function Header() {
             className="hidden lg:flex items-center gap-7 text-[14px] font-medium text-[#172033]"
           >
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 className="hover:text-[#163259] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#C9A227] hover:after:w-full after:transition-all after:duration-200 focus-visible:outline-[#0B1F3A]"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* Desktop Action CTAs */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="#admissions"
+            <Link
+              href="/#admissions"
               className="text-[13px] font-medium text-[#475467] hover:text-[#0B1F3A] transition-colors focus-visible:outline-[#0B1F3A] px-2 py-1"
             >
               Student Login
-            </a>
-            <a
-              href="#admissions"
+            </Link>
+            <Link
+              href="/#admissions"
               className="bg-[#0B1F3A] hover:bg-[#163259] text-white text-[13px] font-semibold tracking-wider px-5 py-2.5 rounded-[4px] transition-all duration-150 shadow-xs focus-visible:ring-2 focus-visible:ring-[#0B1F3A] focus-visible:ring-offset-2"
             >
               ENQUIRE NOW
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Right Controls: Phone + Menu */}
@@ -179,7 +180,7 @@ export default function Header() {
 
               <nav aria-label="Mobile Navigation" className="flex flex-col space-y-1">
                 {NAV_LINKS.map((link) => (
-                  <a
+                  <Link
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
@@ -187,19 +188,19 @@ export default function Header() {
                   >
                     <span>{link.name}</span>
                     <ArrowRight className="w-4 h-4 text-[#C9A227]" aria-hidden="true" />
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>
 
             <div className="pt-6 border-t border-[#EBECE9] space-y-3">
-              <a
-                href="#admissions"
+              <Link
+                href="/#admissions"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full min-h-[44px] bg-[#0B1F3A] text-white flex items-center justify-center py-3 rounded-[4px] text-[14px] font-semibold tracking-wider block"
               >
                 ENQUIRE NOW
-              </a>
+              </Link>
 
               <div className="bg-[#FAFAF7] border border-[#EBECE9] p-3.5 rounded-[4px] space-y-2">
                 <span className="text-[11px] font-semibold uppercase tracking-wider text-[#667085] block">

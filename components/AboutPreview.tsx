@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export default function AboutPreview() {
@@ -30,13 +31,13 @@ export default function AboutPreview() {
                 standards to students within Vaishali district.
               </p>
             </div>
-            <a
-              href="#founders"
+            <Link
+              href="/about"
               className="min-h-[44px] inline-flex items-center gap-2 text-[14px] font-semibold text-[#0B1F3A] hover:text-[#163259] transition-colors focus-visible:outline-[#0B1F3A]"
             >
               <span>READ ABOUT THE INSTITUTE</span>
               <ArrowRight className="w-4 h-4 text-[#C9A227]" aria-hidden="true" />
-            </a>
+            </Link>
           </div>
 
           {/* Right Column: Factual Editorial Narrative (7 of 12 cols) */}

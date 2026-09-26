@@ -420,7 +420,7 @@ export default function AboutPage() {
                 ENQUIRE NOW
               </Link>
               <Link
-                href="/#courses"
+                href="/courses"
                 className="w-full sm:w-auto min-h-[44px] bg-transparent hover:bg-white/10 text-white border border-white/20 hover:border-white text-[14px] font-semibold px-6 py-3.5 rounded-[4px] transition-all duration-150 text-center inline-flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-[#C9A227]"
               >
                 <span>Explore Courses</span>

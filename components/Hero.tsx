@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const EXAM_TRACKS = [
@@ -80,19 +81,19 @@ export default function Hero() {
 
           {/* Primary & Secondary Call to Actions */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
-            <a
-              href="#admissions"
+            <Link
+              href="/#admissions"
               className="min-h-[44px] bg-[#0B1F3A] hover:bg-[#163259] text-white text-[14px] font-semibold tracking-wider px-7 py-3.5 rounded-[4px] shadow-xs transition-all duration-150 text-center inline-flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-[#0B1F3A] focus-visible:ring-offset-2"
             >
               <span>ENQUIRE NOW</span>
-            </a>
-            <a
-              href="#courses"
+            </Link>
+            <Link
+              href="/courses"
               className="min-h-[44px] bg-transparent hover:bg-white text-[#0B1F3A] border border-[#D0D5DD] hover:border-[#0B1F3A] text-[14px] font-semibold px-6 py-3.5 rounded-[4px] transition-all duration-150 text-center inline-flex items-center justify-center gap-2 focus-visible:ring-2 focus-visible:ring-[#0B1F3A]"
             >
               <span>EXPLORE COURSES</span>
               <ArrowRight className="w-4 h-4 text-[#C9A227]" aria-hidden="true" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

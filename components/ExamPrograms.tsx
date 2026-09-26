@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 interface ProgramItem {
@@ -6,6 +7,7 @@ interface ProgramItem {
   name: string;
   subtitle: string;
   description: string;
+  href: string;
 }
 
 const PROGRAMS: ProgramItem[] = [
@@ -15,6 +17,7 @@ const PROGRAMS: ProgramItem[] = [
     subtitle: "Civil Services Examination",
     description:
       "Comprehensive foundational guidance for General Studies, CSAT, and answer-writing discipline aligned with UPSC syllabus standards.",
+    href: "/courses/upsc",
   },
   {
     number: "02",
@@ -22,6 +25,7 @@ const PROGRAMS: ProgramItem[] = [
     subtitle: "Bihar Public Service Commission",
     description:
       "Specialized state services curriculum emphasizing Bihar special studies, General Studies, and structured Mains preparation.",
+    href: "/courses/bpsc",
   },
   {
     number: "03",
@@ -29,6 +33,7 @@ const PROGRAMS: ProgramItem[] = [
     subtitle: "Combined Graduate Level & CHSL",
     description:
       "Rigorous preparation covering Quantitative Aptitude, Reasoning, General Awareness, and English comprehension for national commissions.",
+    href: "/courses/ssc",
   },
   {
     number: "04",
@@ -36,6 +41,7 @@ const PROGRAMS: ProgramItem[] = [
     subtitle: "RRB NTPC & Technical Cadres",
     description:
       "Targeted concept drills, computer-based test practice, and General Science foundation for Railway recruitment examinations.",
+    href: "/courses/railway",
   },
   {
     number: "05",
@@ -43,6 +49,7 @@ const PROGRAMS: ProgramItem[] = [
     subtitle: "IBPS PO / Clerk & SBI Cadres",
     description:
       "Intensive numerical ability, reasoning speed, data interpretation, and banking awareness modules for public sector bank recruitment.",
+    href: "/courses/banking",
   },
 ];
 
@@ -103,14 +110,20 @@ export default function ExamPrograms() {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#EBECE9]">
-                <a
-                  href="#admissions"
-                  className="min-h-[44px] inline-flex items-center gap-2 text-[13px] font-semibold text-[#0B1F3A] hover:text-[#163259] transition-colors focus-visible:outline-[#0B1F3A]"
+              <div className="pt-4 border-t border-[#EBECE9] flex items-center justify-between">
+                <Link
+                  href={prog.href}
+                  className="min-h-[44px] inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#0B1F3A] hover:text-[#163259] transition-colors focus-visible:outline-[#0B1F3A]"
                 >
-                  <span>Enquire for Syllabus & Batches</span>
+                  <span>View Course Details</span>
                   <ArrowRight className="w-3.5 h-3.5 text-[#C9A227]" aria-hidden="true" />
-                </a>
+                </Link>
+                <Link
+                  href="/#admissions"
+                  className="text-[12px] font-medium text-[#667085] hover:text-[#0B1F3A] transition-colors"
+                >
+                  Enquire
+                </Link>
               </div>
             </div>
           ))}
